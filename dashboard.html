@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard — RePaper AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav">
+
+    <a href="index.html" class="logo">
+      RePaper AI
+    </a>
+
+    <div class="page-title-pill">
+      Dashboard
+    </div>
+
+    <a href="index.html" class="nav-button">
+      Home
+    </a>
+
+  </div>
+
+</nav>
+
+
+<main class="dashboard-page">
+
+  <div class="dashboard-shell">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="sidebar-logo">
+        RePaper<span>AI</span>
+      </div>
+
+      <div class="sidebar-nav">
+
+        <button
+          class="sidebar-link active"
+          onclick="showDashboard('overview', this)"
+        >
+          Overview
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <section class="dashboard-main">
+
+      <div class="dashboard-header">
+
+        <div>
+
+          <h1 id="dashTitle">
+            Overview
+          </h1>
+
+          <p id="dashSubtitle">
+            See how your school is reusing paper.
+          </p>
+
+        </div>
+
+        <div class="header-actions">
+
+          <div class="org-block">
+
+            <div class="avatar" id="orgAvatar">
+              DPS
+            </div>
+
+            <div class="org-meta">
+              <strong id="orgName">DPS International School</strong>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="container footer">
+
+    <strong>
+      ↻ RePaper AI
+    </strong>
+
+    <span>
+      Giving every sheet a second life.
+    </span>
+
+    <span>
+      Prototype
+    </span>
+
+  </div>
+
+</footer>
+
+<script>
+</script>
+
+</body>
+</html>

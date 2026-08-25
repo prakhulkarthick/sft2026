@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Demo — RePaper AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav">
+
+    <a href="index.html" class="logo">
+      RePaper AI
+    </a>
+
+    <div class="page-title-pill">
+      AI Demo
+    </div>
+
+    <a href="index.html" class="nav-button">
+      Home
+    </a>
+
+  </div>
+
+</nav>
+
+
+<main class="page">
+
+  <section class="demo-page">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          RePaper AI Demo
+        </div>
+
+        <h2>
+          What could this sheet become?
+        </h2>
+
+        <p>
+          Upload a picture of discarded paper and see
+          how RePaper AI could decide its second life.
+        </p>
+
+      </div>
+
+
+      <div class="demo-layout">
+
+        <!-- UPLOAD -->
+
+        <div class="demo-card">
+
+          <div
+            class="upload"
+            id="uploadBox"
+            onclick="document.getElementById('fileInput').click()"
+          >
+
+            <div class="upload-icon">
+              📷
+            </div>
+
+            <h3>
+              Upload a paper image
+            </h3>
+
+            <p>
+              Use a photo of a worksheet, notebook page
+              or other discarded paper.
+            </p>
+
+            <button
+              class="btn btn-primary"
+              onclick="
+                event.stopPropagation();
+                document.getElementById('fileInput').click()
+              "
+            >
+              Choose Image
+            </button>
+
+          </div>
+
+          <input
+            id="fileInput"
+            type="file"
+            accept="image/*"
+            onchange="analyzeImage(event)"
+            style="display: none;"
+          >
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="demo-card analysis">
+
+          <div id="placeholder" class="analysis-placeholder">
+
+            <div>
+
+              <div class="placeholder-icon">
+                ✨
+              </div>
+
+              <strong>
+                Waiting for a sheet
+              </strong>
+
+              <p class="placeholder-copy">
+                Your AI recommendation will appear here.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div id="result" class="result">
+
+            <div class="result-top">
+
+              <div class="confidence">
+                87%
+              </div>
+
+              <div>
+
+                <strong>
+                  High reuse potential
+                </strong>
+
+                <p>
+                  RePaper AI analysis complete
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="recommendation">
+
+              <span class="recommendation-label">
+                Recommended second life
+              </span>
+
+              <h3>
+                Scratch Paper
+              </h3>
+
+              <p>
+                The sheet contains a useful clean area.
+                Based on the simulated school demand,
+                scratch paper is the most useful option.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="script.js" defer></script>
+
+<footer>
+
+  <div class="container footer">
+
+    <strong>
+      ↻ RePaper AI
+    </strong>
+
+    <span>
+      Giving every sheet a second life.
+    </span>
+
+    <span>
+      Prototype
+    </span>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
