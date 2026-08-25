@@ -9,3 +9,5 @@ The scanner reads uploaded pixels through a browser canvas and computes determin
 Run the fixture tests with `npm test`.
 
 Recommended next steps: collect and label real school images; train/test a segmentation model; convert masks to polygons; use a nesting algorithm for A5, memo, or flashcard templates; score `recovered_area × demand − cutting_waste − handling_cost`; validate manually before connecting a guarded cutter; store aggregate metrics rather than student worksheet images by default.
+
+Lets start working
