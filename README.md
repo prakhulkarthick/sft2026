@@ -8,6 +8,13 @@ The scanner reads uploaded pixels through a browser canvas and computes determin
 
 Run the fixture tests with `npm test`.
 
-Recommended next steps: collect and label real school images; train/test a segmentation model; convert masks to polygons; use a nesting algorithm for A5, memo, or flashcard templates; score `recovered_area × demand − cutting_waste − handling_cost`; validate manually before connecting a guarded cutter; store aggregate metrics rather than student worksheet images by default.
+## Publish with GitHub Pages
 
-Lets start working
+1. Push this repository to GitHub.
+2. Open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select the `main` branch and the `/ (root)` folder, then click **Save**.
+
+GitHub Pages will publish `index.html` as the site home. The site is static and uses relative asset paths, so no build step or server is required.
+
+Recommended next steps: collect and label real school images; train/test a segmentation model; convert masks to polygons; use a nesting algorithm for A5, memo, or flashcard templates; score `recovered_area × demand − cutting_waste − handling_cost`; validate manually before connecting a guarded cutter; store aggregate metrics rather than student worksheet images by default.
