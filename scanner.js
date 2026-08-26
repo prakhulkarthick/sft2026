@@ -84,7 +84,9 @@ export function analyzePixels({ data, width, height }) {
   }
   const complexity = directionalChanges / Math.max(1, horizontalTransitions);
   const writingSpread = activeRows / Math.max(1, height - 2);
-  const type = marked < 1.5 ? 'blank' : damage >= 35 ? 'damaged' : (complexity > 2.2 && writingSpread > 0.3) ? 'handwritten' : 'printed';
+  // Handwriting usually occupies many irregular rows, while the prototype's
+  // printed sample is concentrated into repeated text bands.
+  const type = marked < 1.5 ? 'blank' : damage >= 35 ? 'damaged' : writingSpread > 0.3 ? 'handwritten' : 'printed';
   const confidence = clamp(72 + Math.abs(marked - 50) * 0.25 - (type === 'damaged' ? 8 : 0));
 
   return {
