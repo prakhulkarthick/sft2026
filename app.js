@@ -20,4 +20,8 @@ function recommend(blank){
 $('fileInput').addEventListener('change',e=>{const f=e.target.files[0];if(f)analyze(URL.createObjectURL(f));});
 $('sampleBtn').addEventListener('click',()=>analyze('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800"><rect width="100%" height="100%" fill="#fff"/><text x="55" y="90" font-family="Arial" font-size="22" fill="#555">SCIENCE WORKSHEET</text><path d="M55 135h460M55 175h360M55 215h410M55 255h300" stroke="#aab6b0" stroke-width="5"/><path d="M55 340h460M55 390h460M55 440h460" stroke="#d5ddd8" stroke-width="4"/></svg>`)));
 document.querySelectorAll('input[type=range]').forEach(input=>input.addEventListener('input',e=>{e.target.nextElementSibling.value=e.target.value;if(hasScan)recommend(+$('blankStat').textContent.replace('%',''));}));
+document.querySelectorAll('[data-tab]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-tab]').forEach(tab=>{const selected=tab===button;tab.classList.toggle('active',selected);tab.setAttribute('aria-selected',selected);});
+  document.querySelectorAll('.tab-panel').forEach(panel=>{const selected=panel.id===`tab-${button.dataset.tab}`;panel.hidden=!selected;panel.classList.toggle('active',selected);});
+}));
 $('printBtn').addEventListener('click',()=>window.print()); $('dropzone').addEventListener('dragover',e=>{e.preventDefault();$('dropzone').style.background='#f0fbf3';}); $('dropzone').addEventListener('dragleave',()=>$('dropzone').style.background=''); $('dropzone').addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer.files[0];if(f?.type.startsWith('image/'))analyze(URL.createObjectURL(f));});
